@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "Notification Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Send Notification",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{notificationBaseUrl}}/api/notifications?message=Hello",
+          "host": ["{{notificationBaseUrl}}"],
+          "path": ["api", "notifications"],
+          "query": [
+            { "key": "message", "value": "Hello" }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "notificationBaseUrl",
+      "value": "http://localhost:8081"
+    }
+  ]
+}
